@@ -10,7 +10,7 @@ function AutoPlayAudio() {
       });
     };
 
-    document.addEventListener("click", playAudio, { once: true });
+    document.addEventListener("click", playAudio);
 
     return () => {
       document.removeEventListener("click", playAudio);
@@ -20,7 +20,7 @@ function AutoPlayAudio() {
   return (
     <audio
       ref={audioRef}
-      src="/src/assets/audios/NamLayTayAnh.mp3"
+      src="/my-wedding/assets/audios/NamLayTayAnh.mp3"
       preload="auto"
     />
   );
