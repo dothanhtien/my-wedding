@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomePageStyledWrapper = styled.div`
-  background-image: url("/assets/images/background.jpg");
+  background-image: url("/my-wedding/assets/images/background.jpg");
   background-size: cover;
   background-position-x: 75%;
   background-position-y: bottom;
