@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/navBar";
-import AutoPlayAudio from "./components/audioPlayer";
+import AutoPlayAudio from "./components/autoPlayAudio";
 
 import HomePage from "./pages/home";
 import CouplePage from "./pages/couple";

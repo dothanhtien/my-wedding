@@ -20,7 +20,7 @@ function AutoPlayAudio() {
   return (
     <audio
       ref={audioRef}
-      src="/src/assets/audios/NamLayTayAnh.mp3"
+      src="/assets/audios/NamLayTayAnh.mp3"
       preload="auto"
     />
   );
