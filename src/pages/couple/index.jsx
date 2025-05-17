@@ -24,7 +24,7 @@ function CouplePage() {
           <div>
             <IntroItem>
               <IntroItemContainer>
-                <img src="/src/assets/images/theGroom.jpg" alt="The Groom" />
+                <img src="/assets/images/theGroom.jpg" alt="The Groom" />
               </IntroItemContainer>
             </IntroItem>
 
@@ -41,7 +41,7 @@ function CouplePage() {
           <div>
             <IntroItem>
               <IntroItemContainer>
-                <img src="/src/assets/images/theBride.jpg" alt="The Bride" />
+                <img src="/assets/images/theBride.jpg" alt="The Bride" />
               </IntroItemContainer>
             </IntroItem>
 
