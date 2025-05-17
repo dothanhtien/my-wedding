@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
 export const HomePageStyledWrapper = styled.div`
-  height: 100vh;
+  background-image: url("src/assets/images/background.jpg");
+  background-size: cover;
+  background-position-x: 75%;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+
+
+  height: calc(100vh - 56px);
   display: flex;
   justify-content: start;
   align-items: center;
