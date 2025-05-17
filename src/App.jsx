@@ -10,7 +10,7 @@ import EventPage from "./pages/event";
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/event" element={<EventPage />} />
       </Routes>
       <AutoPlayAudio />
-    </div>
+    </>
   );
 }
 

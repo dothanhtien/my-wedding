@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
         <Link id="home" className="navbar-brand" to="/">
           Tiến <i className="bi bi-heart-fill" style={{ color: "red" }}></i>{" "}

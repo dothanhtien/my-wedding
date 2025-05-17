@@ -3,12 +3,6 @@ body {
   font-family: "Roboto Mono", monospace;
   font-style: normal;
 
-  background-image: url("assets/images/background.jpg");
-  background-size: cover;
-  background-position-x: 80%;
-  background-position-y: bottom;
-  background-repeat: no-repeat;
-
   margin: 0;
   padding: 0;
   height: 100vh;
