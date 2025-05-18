@@ -35,7 +35,7 @@ export const IntroImage = styled.div`
       position: absolute;
       top: -100px;
       right: -10px;
-      background-image: url(/assets/images/f1.png);
+      background-image: url(/my-wedding/assets/images/f1.png);
       width: 50%;
       height: 40%;
       background-repeat: no-repeat;
@@ -49,7 +49,7 @@ export const IntroImage = styled.div`
       left: -80px;
       height: 40%;
       width: 45%;
-      background-image: url(/assets/images/f2.png);
+      background-image: url(/my-wedding/assets/images/f2.png);
       background-repeat: no-repeat;
       background-size: 100%;
       transform: rotate(0);
