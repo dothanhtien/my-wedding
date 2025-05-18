@@ -13,7 +13,7 @@ function EventPage() {
       <div className="page-container">
         <IntroImage>
           <div>
-            <img src="/assets/images/event1.jpg" />
+            <img src="/my-wedding/assets/images/event1.jpg" />
           </div>
         </IntroImage>
 
@@ -22,7 +22,7 @@ function EventPage() {
             <h2 className="text-center mb-4">Lễ Vu Quy</h2>
             <div class="row">
               <div class="col-12 col-sm-6 mb-4 mb-sm-0">
-                <img src="/assets/images/event2.jpg" />
+                <img src="/my-wedding/assets/images/event2.jpg" />
               </div>
               <div class="col-12 col-sm-6">
                 <div>
@@ -45,7 +45,7 @@ function EventPage() {
             <h2 className="text-center mb-4">Lễ Thành Hôn</h2>
             <div class="row">
               <div class="col-12 col-sm-6 mb-4 mb-sm-0">
-                <img src="/assets/images/event3.jpg" />
+                <img src="/my-wedding/assets/images/event3.jpg" />
               </div>
               <div class="col-12 col-sm-6">
                 <div>
