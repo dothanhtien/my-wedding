@@ -35,8 +35,8 @@ export const IntroSection = styled.div`
 `;
 
 export const IntroItem = styled.div`
-  width: 400px;
-  height: 400px;
+  width: 380px;
+  height: 380px;
   border: 5px solid red;
   border-radius: 50%;
   display: flex;
@@ -45,8 +45,8 @@ export const IntroItem = styled.div`
 `;
 
 export const IntroItemContainer = styled.div`
-  width: 380px;
-  height: 380px;
+  width: 360px;
+  height: 360px;
   overflow: hidden;
   border-radius: 50%;
 

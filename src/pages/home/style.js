@@ -14,7 +14,7 @@ export const HomePageStyledWrapper = styled.div`
   align-items: center;
 
   & > div {
-    width: 45%;
+    width: 50%;
     padding-left: 50px;
     text-align: center;
 

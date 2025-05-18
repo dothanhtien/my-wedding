@@ -10,7 +10,7 @@ function AutoPlayAudio() {
       });
     };
 
-    document.addEventListener("click", playAudio, { once: true });
+    document.addEventListener("click", playAudio);
 
     return () => {
       document.removeEventListener("click", playAudio);
@@ -22,6 +22,7 @@ function AutoPlayAudio() {
       ref={audioRef}
       src="/assets/audios/NamLayTayAnh.mp3"
       preload="auto"
+      loop
     />
   );
 }
