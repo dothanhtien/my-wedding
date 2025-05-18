@@ -22,6 +22,7 @@ function AutoPlayAudio() {
       ref={audioRef}
       src="/my-wedding/assets/audios/NamLayTayAnh.mp3"
       preload="auto"
+      loop
     />
   );
 }
