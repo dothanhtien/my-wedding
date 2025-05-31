@@ -2,10 +2,39 @@ import { useState } from "react";
 import { concept1Images, concept2Images, concept3Images } from "./data";
 import { AlbumPageStyledWrapper } from "./style";
 
+const accessAlbumCode = import.meta.env.VITE_ACCESS_ALBUM_CODE;
+
 function AlbumPage() {
-  const [visible1, setVisible1] = useState(3);
-  const [visible2, setVisible2] = useState(3);
-  const [visible3, setVisible3] = useState(3);
+  const [visible1, setVisible1] = useState(1);
+  const [visible2, setVisible2] = useState(1);
+  const [visible3, setVisible3] = useState(1);
+  const [lockLoadMore, setLockLoadMore] = useState(true);
+
+  const handleLoadMore = (conceptNo) => {
+    if (lockLoadMore) {
+      const userInput = prompt("Enter password to see more photos:");
+      if (userInput !== accessAlbumCode) {
+        alert("Incorrect password");
+        return;
+      }
+
+      setLockLoadMore(false);
+    }
+
+    switch (conceptNo) {
+      case 1:
+        setVisible1(visible1 + 5);
+        break;
+      case 2:
+        setVisible2(visible2 + 5);
+        break;
+      case 3:
+        setVisible3(visible3 + 5);
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <AlbumPageStyledWrapper>
@@ -22,7 +51,7 @@ function AlbumPage() {
           {visible1 < concept1Images.length && (
             <div className="text-center">
               <button
-                onClick={() => setVisible1(visible1 + 5)}
+                onClick={() => handleLoadMore(1)}
                 className="btn btn-danger mb-4"
               >
                 Load More
@@ -43,7 +72,7 @@ function AlbumPage() {
           {visible2 < concept2Images.length && (
             <div className="text-center">
               <button
-                onClick={() => setVisible2(visible2 + 5)}
+                onClick={() => handleLoadMore(2)}
                 className="btn btn-danger mb-4"
               >
                 Load More
@@ -64,7 +93,7 @@ function AlbumPage() {
           {visible3 < concept3Images.length && (
             <div className="text-center">
               <button
-                onClick={() => setVisible3(visible3 + 5)}
+                onClick={() => handleLoadMore(3)}
                 className="btn btn-danger mb-4"
               >
                 Load More

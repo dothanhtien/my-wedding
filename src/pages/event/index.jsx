@@ -20,21 +20,21 @@ function EventPage() {
         <EventSection>
           <EventItem>
             <h2 className="text-center mb-4">Lễ Vu Quy</h2>
-            <div class="row">
-              <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+            <div className="row">
+              <div className="col-12 col-sm-6 mb-4 mb-sm-0">
                 <img src="/assets/images/event2.jpg" />
               </div>
-              <div class="col-12 col-sm-6">
+              <div className="col-12 col-sm-6">
                 <div>
                   <div>
-                    <i class="bi bi-calendar-heart"></i> 2025-06-22
+                    <i className="bi bi-calendar-heart"></i> 2025-06-22
                   </div>
                   <div>
-                    <i class="bi bi-clock"></i> 11:00
+                    <i className="bi bi-clock"></i> 10:30
                   </div>
                   <div>
-                    <i class="bi bi-geo-alt"></i> Km 36, Thôn Phước Lộc B, Huyện
-                    Krông Pắc, Tỉnh Đắk Lắk
+                    <i className="bi bi-geo-alt"></i> Km 36, Xã Ea Phê, Thôn
+                    Phước Lộc 3, Huyện Krông Pắc, Tỉnh Đắk Lắk
                   </div>
                 </div>
               </div>
@@ -43,20 +43,20 @@ function EventPage() {
 
           <EventItem>
             <h2 className="text-center mb-4">Lễ Thành Hôn</h2>
-            <div class="row">
-              <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+            <div className="row">
+              <div className="col-12 col-sm-6 mb-4 mb-sm-0">
                 <img src="/assets/images/event3.jpg" />
               </div>
-              <div class="col-12 col-sm-6">
+              <div className="col-12 col-sm-6">
                 <div>
                   <div>
-                    <i class="bi bi-calendar-heart"></i> 2025-07-04
+                    <i className="bi bi-calendar-heart"></i> 2025-07-04
                   </div>
                   <div>
-                    <i class="bi bi-clock"></i> 11:00
+                    <i className="bi bi-clock"></i> 11:00
                   </div>
                   <div>
-                    <i class="bi bi-geo-alt"></i> Thôn Hlil 2, Xã Ia Ma Rơn,
+                    <i className="bi bi-geo-alt"></i> Thôn Hlil 2, Xã Ia Ma Rơn,
                     Huyện Ia Pa, Tỉnh Gia Lai
                   </div>
                 </div>

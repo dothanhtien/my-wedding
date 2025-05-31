@@ -101,6 +101,7 @@ export const EventItem = styled.div`
 
   img {
     width: 100%;
+    border-radius: 8px;
   }
 
   i {
