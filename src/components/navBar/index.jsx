@@ -19,6 +19,10 @@ const navItems = [
     label: "Sự Kiện",
     path: "/event",
   },
+  {
+    label: "Thiệp Cưới",
+    path: "/invitation",
+  },
 ];
 
 function NavBar() {
@@ -36,7 +40,7 @@ function NavBar() {
         </Link>
 
         <NavBarMobile>
-          <div class="btn-group dropstart">
+          <div className="btn-group dropstart">
             <button
               className="navbar-toggler"
               data-bs-toggle="dropdown"
@@ -44,7 +48,7 @@ function NavBar() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <ul class="dropdown-menu">
+            <ul className="dropdown-menu">
               {navItems.map((item, key) => (
                 <li key={key}>
                   <Link

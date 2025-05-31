@@ -1,13 +1,16 @@
 export const concept1Images = [
   {
+    src: "https://mybox.vietteltelecom.vn/api/v1/file-entries/13031444?shareable_link=6003&password=null&thumbnail=",
+  },
+  {
     src: "https://mybox.vietteltelecom.vn/api/v1/file-entries/13031452?shareable_link=6001&password=null&thumbnail=",
   },
   {
     src: "https://mybox.vietteltelecom.vn/api/v1/file-entries/13031449?shareable_link=6002&password=null&thumbnail=",
   },
-  {
-    src: "https://mybox.vietteltelecom.vn/api/v1/file-entries/13031444?shareable_link=6003&password=null&thumbnail=",
-  },
+  // {
+  //   src: "https://mybox.vietteltelecom.vn/api/v1/file-entries/13031444?shareable_link=6003&password=null&thumbnail=",
+  // },
   {
     src: "https://mybox.vietteltelecom.vn/api/v1/file-entries/13031442?shareable_link=6004&password=null&thumbnail=",
   },

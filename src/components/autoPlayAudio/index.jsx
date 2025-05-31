@@ -53,9 +53,9 @@ function AutoPlayAudio() {
       />
       <button onClick={togglePlay} className="btn btn-outline-danger">
         {isPlaying ? (
-          <i class="bi bi-volume-up-fill"></i>
+          <i className="bi bi-volume-up-fill"></i>
         ) : (
-          <i class="bi bi-volume-mute-fill"></i>
+          <i className="bi bi-volume-mute-fill"></i>
         )}
       </button>
     </AutoPlayAudioStyledWrapper>

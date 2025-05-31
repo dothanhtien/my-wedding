@@ -42,6 +42,7 @@ export const IntroItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 `;
 
 export const IntroItemContainer = styled.div`
