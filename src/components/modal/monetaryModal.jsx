@@ -1,26 +1,29 @@
 import React from "react";
+import { Modal } from "react-bootstrap";
 import styled from "styled-components";
-import ModalComponent from "./common";
 
 const ModalContainer = styled.div`
   padding: 50px 0;
+  text-align: center;
 
   @media (max-width: 576px) {
     padding: 40px 0;
   }
 `;
 
-const MonetaryModal = ({ show, onClose }) => {
+const MonetaryModal = ({ show, onHide }) => {
   return (
-    <ModalComponent show={show} onClose={onClose}>
-      <ModalContainer>
-        <img
-          className="w-75"
-          src="/assets/images/qr/loan.jpg"
-          alt="monetary gift"
-        />
-      </ModalContainer>
-    </ModalComponent>
+    <Modal show={show} onHide={onHide} centered>
+      <Modal.Body>
+        <ModalContainer>
+          <img
+            className="w-75"
+            src="/assets/images/qr/loan.jpg"
+            alt="monetary gift"
+          />
+        </ModalContainer>
+      </Modal.Body>
+    </Modal>
   );
 };
 
