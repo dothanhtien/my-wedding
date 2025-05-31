@@ -102,7 +102,7 @@ function InvitationPage() {
 
       <MonetaryModal
         show={showMonetaryModal}
-        onClose={() => setShowMonetaryModal(false)}
+        onHide={() => setShowMonetaryModal(false)}
       />
     </InvitationStyledWrapper>
   );
