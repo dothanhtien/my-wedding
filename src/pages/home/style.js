@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const HomePageStyledWrapper = styled.div`
-  background-image: ${({ $loaded, $imageUrl }) =>
-    $loaded ? `url(${$imageUrl})` : "none"};
+  background-image: ${({ $imageUrl }) => `url(${$imageUrl})`};
   background-size: cover;
   background-position-x: 75%;
   background-position-y: bottom;

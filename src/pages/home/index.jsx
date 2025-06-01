@@ -1,31 +1,26 @@
 import Countdown from "../../components/countDown";
 import { HomePageStyledWrapper } from "./style";
-import HeartLoading from "../../components/icons/heartLoading";
-import { useImagesLoaded } from "../../hooks/useImagesLoaded";
 import HeartBeat from "../../components/icons/heartBeat";
+import withPageLoader from "../../components/withPageLoader";
 
 const imageUrl = "/my-wedding/assets/images/background.jpg";
 
 function HomePage() {
-  const bgImageLoaded = useImagesLoaded([imageUrl]);
-
   return (
-    <HomePageStyledWrapper $loaded={bgImageLoaded} $imageUrl={imageUrl}>
-      {!bgImageLoaded ? (
-        <HeartLoading />
-      ) : (
-        <div className="main">
-          <div className="coupleNames">
-            <div>Thành Tiến</div>
-            <HeartBeat className="heart" />
-            <div>Thúy Loan</div>
-          </div>
-          <p className="gettingMarried">We’re getting married</p>
-          <Countdown />
+    <HomePageStyledWrapper $imageUrl={imageUrl}>
+      <div className="main">
+        <div className="coupleNames">
+          <div>Thành Tiến</div>
+          <HeartBeat className="heart" />
+          <div>Thúy Loan</div>
         </div>
-      )}
+        <p className="gettingMarried">We’re getting married</p>
+        <Countdown />
+      </div>
     </HomePageStyledWrapper>
   );
 }
 
-export default HomePage;
+const HomePageWithLoader = withPageLoader(HomePage);
+
+export default HomePageWithLoader;

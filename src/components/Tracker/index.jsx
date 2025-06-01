@@ -27,6 +27,7 @@ const useTracker = () => {
           ip: ipData.ip,
           country: ipData.country,
           city: ipData.city,
+          loc: ipData.loc,
           browser: device.browser.name,
           os: device.os.name,
           deviceType: device.device.type || "desktop",
