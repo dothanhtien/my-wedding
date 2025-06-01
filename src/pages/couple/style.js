@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CouplePageStyledWrapper = styled.div`
-  height: ${({ $loaded }) => ($loaded ? "calc(100vh - 56px);" : "none")};
+  height: calc(100vh - 56px);
   background-color: #ffe2e5;
 
   .container {
