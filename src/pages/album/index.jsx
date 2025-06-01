@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { concept1Images, concept2Images, concept3Images } from "./data";
 import { AlbumPageStyledWrapper } from "./style";
+import HeartLoading from "../../components/icons/heartLoading";
+import { useImagesLoaded } from "../../hooks/useImagesLoaded";
 
 const accessAlbumCode = import.meta.env.VITE_ACCESS_ALBUM_CODE;
 
@@ -10,9 +12,18 @@ function AlbumPage() {
   const [visible3, setVisible3] = useState(1);
   const [lockLoadMore, setLockLoadMore] = useState(true);
 
+  const imagesLoaded = useImagesLoaded([
+    concept1Images[0].src,
+    concept2Images[0].src,
+    concept3Images[0].src,
+  ]);
+
   const handleLoadMore = (conceptNo) => {
     if (lockLoadMore) {
       const userInput = prompt("Enter password to see more photos:");
+      if (userInput === null) {
+        return;
+      }
       if (userInput !== accessAlbumCode) {
         alert("Incorrect password");
         return;
@@ -38,70 +49,74 @@ function AlbumPage() {
 
   return (
     <AlbumPageStyledWrapper>
-      <div className="container">
-        <section>
-          <h3>Concept 1</h3>
-          <div className="albumGrid">
-            {concept1Images.slice(0, visible1).map((image, key) => (
-              <div key={key} className="albumItem">
-                <img src={image.src} alt={`concept1-${key}`} loading="lazy" />
-              </div>
-            ))}
-          </div>
-          {visible1 < concept1Images.length && (
-            <div className="text-center">
-              <button
-                onClick={() => handleLoadMore(1)}
-                className="btn btn-danger mb-4"
-              >
-                Load More
-              </button>
+      {!imagesLoaded ? (
+        <HeartLoading />
+      ) : (
+        <div className="container">
+          <section>
+            <h3>Concept #1 - Thác Đray Nur</h3>
+            <div className="albumGrid">
+              {concept1Images.slice(0, visible1).map((image, key) => (
+                <div key={key} className="albumItem">
+                  <img src={image.src} alt={`concept1-${key}`} loading="lazy" />
+                </div>
+              ))}
             </div>
-          )}
-        </section>
+            {visible1 < concept1Images.length && (
+              <div className="text-center">
+                <button
+                  onClick={() => handleLoadMore(1)}
+                  className="btn btn-danger mb-4"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
+          </section>
 
-        <section>
-          <h3>Concept 2</h3>
-          <div className="albumGrid">
-            {concept2Images.slice(0, visible2).map((image, key) => (
-              <div key={key} className="albumItem">
-                <img src={image.src} alt={`concept2-${key}`} loading="lazy" />
-              </div>
-            ))}
-          </div>
-          {visible2 < concept2Images.length && (
-            <div className="text-center">
-              <button
-                onClick={() => handleLoadMore(2)}
-                className="btn btn-danger mb-4"
-              >
-                Load More
-              </button>
+          <section>
+            <h3>Concept #2 - Phim trường Hollywood, LA</h3>
+            <div className="albumGrid">
+              {concept2Images.slice(0, visible2).map((image, key) => (
+                <div key={key} className="albumItem">
+                  <img src={image.src} alt={`concept2-${key}`} loading="lazy" />
+                </div>
+              ))}
             </div>
-          )}
-        </section>
+            {visible2 < concept2Images.length && (
+              <div className="text-center">
+                <button
+                  onClick={() => handleLoadMore(2)}
+                  className="btn btn-danger mb-4"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
+          </section>
 
-        <section>
-          <h3>Concept 3</h3>
-          <div className="albumGrid">
-            {concept3Images.slice(0, visible3).map((image, key) => (
-              <div key={key} className="albumItem">
-                <img src={image.src} alt={`concept3-${key}`} loading="lazy" />
-              </div>
-            ))}
-          </div>
-          {visible3 < concept3Images.length && (
-            <div className="text-center">
-              <button
-                onClick={() => handleLoadMore(3)}
-                className="btn btn-danger mb-4"
-              >
-                Load More
-              </button>
+          <section>
+            <h3>Concept #3 - Hoàng hôn bên Hồ Con Rùa, Q.3</h3>
+            <div className="albumGrid">
+              {concept3Images.slice(0, visible3).map((image, key) => (
+                <div key={key} className="albumItem">
+                  <img src={image.src} alt={`concept3-${key}`} loading="lazy" />
+                </div>
+              ))}
             </div>
-          )}
-        </section>
-      </div>
+            {visible3 < concept3Images.length && (
+              <div className="text-center">
+                <button
+                  onClick={() => handleLoadMore(3)}
+                  className="btn btn-danger mb-4"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
+          </section>
+        </div>
+      )}
     </AlbumPageStyledWrapper>
   );
 }

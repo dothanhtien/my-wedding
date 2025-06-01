@@ -8,6 +8,7 @@ import CouplePage from "./pages/couple";
 import AlbumPage from "./pages/album";
 import EventPage from "./pages/event";
 import InvitationPage from "./pages/invitation";
+import Tracker from "./components/Tracker";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/invitation" element={<InvitationPage />} />
       </Routes>
       <AutoPlayAudio />
+      <Tracker />
     </>
   );
 }
