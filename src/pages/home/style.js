@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
 export const HomePageStyledWrapper = styled.div`
-  background-image: url("/assets/images/background.jpg");
+  background-image: ${({ $loaded, $imageUrl }) =>
+    $loaded ? `url(${$imageUrl})` : "none"};
   background-size: cover;
   background-position-x: 75%;
   background-position-y: bottom;
   background-repeat: no-repeat;
-
 
   height: calc(100vh - 56px);
   display: flex;
   justify-content: start;
   align-items: center;
 
-  & > div {
+  .main {
     width: 50%;
     padding-left: 50px;
     text-align: center;
@@ -28,14 +28,7 @@ export const HomePageStyledWrapper = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-
-      .heart {
-        margin: 0 16px;
-
-        i {
-          color: red;
-        }
-      }
+      gap: 16px;
     }
 
     .gettingMarried {

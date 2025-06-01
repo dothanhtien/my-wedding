@@ -56,7 +56,8 @@ export const BackgroundImage = styled.div`
   width: 100%;
   height: 100%;
   min-height: 200px;
-  background-image: url("/assets/images/invitation/invitation1.jpg");
+  background-image: ${({ $loaded, $imageUrl }) =>
+    $loaded ? `url(${$imageUrl})` : "none"};
   background-size: cover;
   background-position-y: 55%;
 `;

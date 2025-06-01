@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CouplePageStyledWrapper = styled.div`
-  height: calc(100vh - 56px);
+  height: ${({ $loaded }) => ($loaded ? "calc(100vh - 56px);" : "none")};
   background-color: #ffe2e5;
 
   .container {
@@ -56,34 +56,5 @@ export const IntroItemContainer = styled.div`
     // height: 100%;
     objectfit: cover;
     objectposition: top;
-  }
-`;
-
-export const HeartBeat = styled.div`
-  display: inline-block;
-  font-size: 48px;
-  color: red;
-  animation: heartbeat 2s infinite;
-
-  @media (max-width: 992px) {
-    margin-bottom: 16px;
-  }
-
-  @keyframes heartbeat {
-    0% {
-      transform: scale(1);
-    }
-    14% {
-      transform: scale(1.3);
-    }
-    28% {
-      transform: scale(1);
-    }
-    42% {
-      transform: scale(1.3);
-    }
-    70% {
-      transform: scale(1);
-    }
   }
 `;
