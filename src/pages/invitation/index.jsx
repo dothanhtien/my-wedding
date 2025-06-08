@@ -12,7 +12,7 @@ import MonetaryModal from "../../components/modal/monetaryModal";
 import withPageLoader from "../../components/withPageLoader";
 
 const invitation1Path = "/assets/images/invitation/invitation1.jpg";
-const invitation2Path = "/assets/images/invitation/invitation2.jpg";
+// const invitation2Path = "/assets/images/invitation/invitation2.jpg";
 const invitation3Path = "/assets/images/invitation/invitation3.jpg";
 const invitation4Path = "/assets/images/invitation/invitation4.jpg";
 const invitation5Path = "/assets/images/invitation/invitation5.jpg";
@@ -35,14 +35,6 @@ function InvitationPage() {
       <IntroImagesSection>
         <div className="mainImage">
           <BackgroundImage $imageUrl={invitation1Path} />
-        </div>
-
-        <div className="secondImage">
-          <img
-            className="w-100"
-            src={invitation2Path}
-            alt="invitation image 2"
-          />
         </div>
       </IntroImagesSection>
 

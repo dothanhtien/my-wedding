@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { AutoPlayAudioStyledWrapper } from "./style";
+import { useDeviceType } from "../../hooks";
 
 function AutoPlayAudio() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const { isMobile } = useDeviceType();
 
   useEffect(() => {
     const playAudio = () => {
@@ -44,7 +46,7 @@ function AutoPlayAudio() {
   };
 
   return (
-    <AutoPlayAudioStyledWrapper>
+    <AutoPlayAudioStyledWrapper $isMobile={isMobile}>
       <audio
         ref={audioRef}
         src="/assets/audios/NamLayTayAnh.mp3"

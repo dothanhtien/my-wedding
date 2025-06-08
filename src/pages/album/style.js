@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const AlbumPageStyledWrapper = styled.div`
-  height: 100%;
+  min-height: 100%;
+  padding-top: 24px;
   background-color: #ffe2e5;
 
   h3 {

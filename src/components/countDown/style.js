@@ -6,7 +6,7 @@ export const CountDownStyledWrapper = styled.div`
 `;
 
 export const CountDownItem = styled.div`
-  text-lign: center;
+  text-align: center;
   color: white;
   border: 3px solid pink;
   height: 80px;

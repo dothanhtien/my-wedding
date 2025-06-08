@@ -7,7 +7,7 @@ export const HomePageStyledWrapper = styled.div`
   background-position-y: bottom;
   background-repeat: no-repeat;
 
-  height: calc(100vh - 56px);
+  height: calc(100vh - 60px);
   display: flex;
   justify-content: start;
   align-items: center;
