@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CouplePageStyledWrapper = styled.div`
-  height: calc(100vh - 56px);
+  min-height: 100%;
   background-color: #ffe2e5;
 
   .container {
@@ -12,10 +12,6 @@ export const CouplePageStyledWrapper = styled.div`
     & > p {
       margin: 24px 0 48px;
     }
-  }
-
-  @media (max-width: 992px) {
-    height: 100%;
   }
 `;
 

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const InvitationStyledWrapper = styled.div``;
+export const InvitationStyledWrapper = styled.div`
+  min-height: 100%;
+`;
 
 export const InvitationSection = styled.div`
   margin: 48px 0;
@@ -33,21 +35,12 @@ export const IntroImagesSection = styled.div`
 
   .mainImage {
     flex: 0 0 auto;
-    width: 70%;
-  }
-
-  .secondImage {
-    flex: 0 0 auto;
-    width: 30%;
+    width: 100%;
   }
 
   @media (max-width: 1199px) {
     .mainImage {
       width: 100%;
-    }
-
-    .secondImage {
-      display: none;
     }
   }
 `;
@@ -55,10 +48,10 @@ export const IntroImagesSection = styled.div`
 export const BackgroundImage = styled.div`
   width: 100%;
   height: 100%;
-  min-height: 200px;
+  min-height: 230px;
   background-image: ${({ $imageUrl }) => `url(${$imageUrl})`};
   background-size: cover;
-  background-position-y: 55%;
+  background-position-y: 42%;
 `;
 
 export const ContentSection = styled.div`

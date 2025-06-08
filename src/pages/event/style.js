@@ -1,18 +1,16 @@
 import styled from "styled-components";
 
 export const EventPageStyledWrapper = styled.div`
-  min-height: calc(100vh - 56px);
+  min-height: 100%;
 
   h1 {
     height: 100px;
-    padding-top: 48px;
+    margin: 48px 0 16px;
     text-align: center;
-    margin-bottom: 40px;
   }
 
   .page-container {
     display: flex;
-    height: calc(100vh - 56px - 148px);
 
     @media (max-width: 991px) {
       flex-direction: column;
